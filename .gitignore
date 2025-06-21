@@ -1,0 +1,21 @@
+# Ignorer les fichiers temporaires Python
+__pycache__/
+*.pyc
+
+# Dossiers spécifiques à Jupyter ou VSCode
+.ipynb_checkpoints/
+.vscode/
+
+# Fichiers/dossiers de données
+data/
+*.xlsx
+*.csv
+
+# Environnement virtuel
+.env/
+.venv/
+env/
+venv/
+
+## Autres
+.DS_Store
