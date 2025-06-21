@@ -1,4 +1,4 @@
-# 🏡 Application de Scraping 
+# Application de Scraping 
 
 Cette application Streamlit permet de scraper, visualiser et analyser des donnees [expat-dakar.com](https://www.expat-dakar.com).
 
