@@ -1,8 +1,8 @@
-# 🏡 Application de Scraping Immobilier - Expat-Dakar
+# 🏡 Application de Scraping 
 
-Cette application Streamlit permet de scraper, visualiser et analyser des annonces immobilières du site [expat-dakar.com](https://www.expat-dakar.com).
+Cette application Streamlit permet de scraper, visualiser et analyser des donnees [expat-dakar.com](https://www.expat-dakar.com).
 
-## 🚀 Fonctionnalités
+##  Fonctionnalités
 
 - 📡 Visualiser les données **scrapées avec Selenium** (nettoyées)
 - 🗂️ Charger et explorer les données **brutes extraites via Web Scraper (Chrome)**
@@ -11,5 +11,5 @@ Cette application Streamlit permet de scraper, visualiser et analyser des annonc
 
 ---
 
-## 📁 Arborescence du projet
+## Arborescence du projet
 
