@@ -47,7 +47,9 @@ if menu == "Scraper les données (nettoyées)":
     ])
 
     # Choix du nombre de pages
-    nb_pages = st.slider(" Nombre de pages à scraper :", min_value=1, max_value="", value=5)
+    votre_choix = 100  # Remplace cela par la vraie valeur que tu veux utiliser dynamiquement
+    nb_pages = st.slider("Nombre de pages à scraper :", min_value=1, max_value=votre_choix, value=5)
+
 
     if st.button("🚀 Lancer le scraping"):
         with st.spinner(f"Scraping {categorie} sur {nb_pages} page(s)..."):
