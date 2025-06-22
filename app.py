@@ -40,14 +40,14 @@ if menu == "Scraper les données (nettoyées)":
     st.header("Scraping des données immobilières")
     
     # Choix de la catégorie
-    categorie = st.selectbox("🏷️ Choisissez une catégorie à scraper :", [
+    categorie = st.selectbox(" Choisissez une catégorie à scraper :", [
         "Appartements à louer",
         "Appartements meublés",
         "Terrains à vendre"
     ])
 
     # Choix du nombre de pages
-    nb_pages = st.slider(" Nombre de pages à scraper :", min_value=1, max_value=100, value=5)
+    nb_pages = st.slider(" Nombre de pages à scraper :", min_value=1, max_value="", value=5)
 
     if st.button("🚀 Lancer le scraping"):
         with st.spinner(f"Scraping {categorie} sur {nb_pages} page(s)..."):
@@ -65,13 +65,13 @@ if menu == "Scraper les données (nettoyées)":
 
 # --- Téléchargement des données brutes ---
 elif menu == "Télécharger les données brutes":
-    st.header("📥 Téléchargement des données brutes")
+    st.header("Téléchargement des données brutes")
     st.markdown("Téléchargez les fichiers originaux au format `.csv` extraits avec Web Scraper.")
 
     for titre, chemin in fichiers_bruts.items():
         df = pd.read_excel(chemin)
         st.download_button(
-            label=f"📄 Télécharger : {titre}",
+            label=f"Télécharger : {titre}",
             data=df.to_csv(index=False).encode('utf-8'),
             file_name=chemin.replace("data/", "").replace(".xlsx", ".csv"),
             mime="text/csv"
@@ -79,7 +79,7 @@ elif menu == "Télécharger les données brutes":
 
 # --- Visualisation Dashboard ---
 elif menu == "Visualiser le dashboard":
-    st.header("📊 Dashboard des données nettoyées")
+    st.header("Dashboard des données nettoyées")
     choix = st.selectbox("Sélectionnez une catégorie :", list(fichiers_nettoyes.keys()))
     df = pd.read_csv(fichiers_nettoyes[choix])
     afficher_dashboard(df, choix)
@@ -88,5 +88,5 @@ elif menu == "Visualiser le dashboard":
 
 # --- Évaluation de l'application ---
 elif menu == "Donner votre avis":
-    st.header("📝 Donnez votre avis")
+    st.header(" Donnez votre avis")
     afficher_formulaire()
