@@ -14,13 +14,13 @@ st.markdown("Explorez, téléchargez, visualisez et évaluez.")
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# --- Menu latéral ---
-menu = st.sidebar.radio(" Navigation", [
+menu = st.sidebar.radio("Navigation", [
     "Scraper les données (nettoyées)",
     "Télécharger les données brutes",
     "Visualiser le dashboard",
     "Donner votre avis"
 ])
+
 
 # --- Fichiers de données ---
 fichiers_bruts = {
@@ -83,3 +83,10 @@ elif menu == "Visualiser le dashboard":
     choix = st.selectbox("Sélectionnez une catégorie :", list(fichiers_nettoyes.keys()))
     df = pd.read_csv(fichiers_nettoyes[choix])
     afficher_dashboard(df, choix)
+
+    afficher_dashboard(df, choix)
+
+# --- Évaluation de l'application ---
+elif menu == "Donner votre avis":
+    st.header("📝 Donnez votre avis")
+    afficher_formulaire()

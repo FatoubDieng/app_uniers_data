@@ -10,3 +10,5 @@ def afficher_formulaire():
         with open("form/feedbacks.txt", "a", encoding="utf-8") as f:
             f.write(f"{nom},{note},{commentaire}\n")
         st.success("Merci pour votre retour !")
+    
+    
