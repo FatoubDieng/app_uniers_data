@@ -30,9 +30,9 @@ fichiers_bruts = {
 }
 
 fichiers_nettoyes = {
-    "Appartements à louer": "data/expat_dkr_app_a_louer.csv",
+    "Appartements à louer": "data/expat_dkr_app_louer.csv",
     "Appartements meublés": "data/expat_dkr_app_meubles.csv",
-    "Terrains à vendre": "data/expat_dkr_terrain_a_vendre.csv"
+    "Terrains à vendre": "data/expat_dkr_terrain_AV.csv"
 }
 
 # --- Scraping ---
@@ -56,9 +56,9 @@ if menu == "Scraper les données (nettoyées)":
             df = scraper_multi_pages(nb_pages, categorie)  
            
             nom_fichier = {
-                "Appartements à louer": "data/expat_dkr_app_a_louer.csv",
+                "Appartements à louer": "data/expat_dkr_app_louer.csv",
                 "Appartements meublés": "data/expat_dkr_app_meubles.csv",
-                "Terrains à vendre": "data/expat_dkr_terrain_a_vendre.csv"
+                "Terrains à vendre": "data/expat_dkr_terrain_AV.csv"
             }[categorie]
             df.to_csv(nom_fichier, index=False)
             st.success(f"Scraping terminé : {len(df)} annonces récupérées.")
